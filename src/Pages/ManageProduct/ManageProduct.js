@@ -4,7 +4,7 @@ const ManageProduct = () => {
     const [products, setProducts] = useState([]);
     const [isDelete, setIsDelete] = useState(null);
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://tranquil-cove-79684.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [isDelete]);
@@ -20,7 +20,7 @@ const ManageProduct = () => {
             confirmButtonText: "Yes, delete it!",
           }).then((result) => {
             if (result.isConfirmed) {
-              fetch(`http://localhost:5000/deleteProduct/${id}`, {
+              fetch(`https://tranquil-cove-79684.herokuapp.com/deleteProduct/${id}`, {
                 method: "DELETE",
                 headers: { "Content-type": "application/json" },
               })

@@ -3,7 +3,7 @@ import { Link, useHistory, useLocation } from "react-router-dom";
 // import useAuth from "../../hooks/useAuth";
 import "./Login.css";
 import backgroundImage from "../../img/pexels-shawn-stutzman-1010496.jpg"
-import githubLogo from "../../img/PngItem_1280311.png"
+
 import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
@@ -16,7 +16,7 @@ const Login = () => {
     height: '100%',
 };
   const {firebaseContext} = useAuth()
-  const {error,saveUser, signInWithGoogle, signInWithGithub,getEmail,getPassWord,SignInWithEmail,setUser,setError, setIsLoading } = firebaseContext;
+  const {error,saveUser, signInWithGoogle, getEmail,getPassWord,SignInWithEmail,setUser,setError, setIsLoading } = firebaseContext;
   
   const history = useHistory();
 
@@ -85,21 +85,7 @@ const Login = () => {
          }}  className="btn">
            <img width="40px" src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png" alt="" />
        </button>
-       <button onClick={() => {
-         signInWithGithub()
-      .then(result => {
-          setUser(result.user)
-          history.push(redirect)
-      })
-      .catch(err =>{
-          setError(err.message)
-      } )
-      .finally(() => {
-          setIsLoading(false)
-      })
-       }}  className="btn">
-           <img width="40px" src={githubLogo}  alt="" />
-       </button>
+       
       </div>
        
        </div>

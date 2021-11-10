@@ -6,7 +6,7 @@ import Rating from 'react-rating';
 const DisplayReview = () => {
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/review")
+        fetch("https://tranquil-cove-79684.herokuapp.com/review")
         .then(res => res.json())
         .then(data => setReviews(data))
     },[])
@@ -19,7 +19,7 @@ const DisplayReview = () => {
             <div className="row">
                 {
                     reviews.map(review => <div className="col-lg-6">
-                    <div style={{height:"300px"}} class="card p-3 text-center">
+                    <div style={{height:"300px"}} class="card mb-3 p-3 text-center">
                     <img src={review.img}
                      class="rounded-circle mx-auto" 
                      width="75px"

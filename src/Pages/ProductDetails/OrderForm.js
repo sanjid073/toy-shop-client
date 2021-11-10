@@ -18,7 +18,7 @@ const OrderForm = (props) => {
   const onSubmit = (data) => {
     data.status = "pending";
     data.item = product;
-    fetch("http://localhost:5000/orders", {
+    fetch("https://tranquil-cove-79684.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider,GithubAuthProvider,onAuthStateChanged,signOut,signInWithEmailAndPassword,updateProfile,createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider,onAuthStateChanged,signOut,signInWithEmailAndPassword,updateProfile,createUserWithEmailAndPassword } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Pages/Login/Firebase/firebase.init";
 
@@ -8,7 +8,7 @@ initializeAuthentication()
 
 const auth = getAuth();
 const googleProvider = new GoogleAuthProvider();
-const githubProvider = new GithubAuthProvider();
+
 
 
 
@@ -29,13 +29,7 @@ const useFirebase = () => {
          
      }
 
-    //  github Sign in
-     const signInWithGithub = () => {
-        setIsLoading(true)
-
-        return signInWithPopup(auth, githubProvider)
-         
-     }
+    
     
     //  get email input value
     const getEmail = (e) => {
@@ -101,7 +95,7 @@ const useFirebase = () => {
     }, [error])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://tranquil-cove-79684.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -109,7 +103,7 @@ const useFirebase = () => {
     // saved to data base
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('http://localhost:5000/users', {
+        fetch('https://tranquil-cove-79684.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'
@@ -150,7 +144,7 @@ const useFirebase = () => {
 
      return{
          signInWithGoogle,
-         signInWithGithub,
+         
          user,
          Logout,
          error,

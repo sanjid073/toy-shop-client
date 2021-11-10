@@ -13,7 +13,7 @@ const Review = () => {
   const { user } = firebaseContext;
 
   const onSubmit = (data) =>{ 
-    fetch("http://localhost:5000/review", {
+    fetch("https://tranquil-cove-79684.herokuapp.com/review", {
         method: "POST",
         headers: {
           "content-type": "application/json",

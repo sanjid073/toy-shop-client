@@ -6,7 +6,7 @@ const ManageAllOrders = () => {
   const [isDelete, setIsDelete] = useState(null);
   const [isUpdate, setIsUpdated] = useState(null);
   useEffect(() => {
-    fetch("http://localhost:5000/allOrders")
+    fetch("https://tranquil-cove-79684.herokuapp.com/allOrders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [isDelete, isUpdate]);
@@ -21,7 +21,7 @@ const ManageAllOrders = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/deleteOrders/${id}`, {
+        fetch(`https://tranquil-cove-79684.herokuapp.com/deleteOrders/${id}`, {
           method: "DELETE",
           headers: { "Content-type": "application/json" },
         })
@@ -43,7 +43,7 @@ const ManageAllOrders = () => {
     });
   };
   const approveOrders = (id) => {
-    fetch(`http://localhost:5000/update/${id}`, {
+    fetch(`https://tranquil-cove-79684.herokuapp.com/update/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application.json",

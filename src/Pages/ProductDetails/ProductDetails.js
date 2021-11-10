@@ -8,7 +8,7 @@ const ProductDetails = () => {
     const {id} = useParams();
     const [product, setProduct] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://tranquil-cove-79684.herokuapp.com/product/${id}`)
         .then(res => res.json())
         .then(data => setProduct(data))
         

@@ -10,7 +10,7 @@ const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const [isDelete, setIsDelete] = useState(null);
   useEffect(() => {
-    fetch(`http://localhost:5000/myOrders/${email}`)
+    fetch(`https://tranquil-cove-79684.herokuapp.com/myOrders/${email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [isDelete, email]);
@@ -26,7 +26,7 @@ const MyOrders = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/deleteOrders/${id}`, {
+        fetch(`https://tranquil-cove-79684.herokuapp.com/deleteOrders/${id}`, {
           method: "DELETE",
           headers: { "Content-type": "application/json" },
         })
