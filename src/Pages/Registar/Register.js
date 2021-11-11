@@ -39,7 +39,6 @@ const Register = () => {
               .then((userCredential) => {
                   setNameAndPhoto()
                   setUser(userCredential.user)
-                  console.log(userCredential.user);
                   saveUser(userCredential.user.email, userCredential.user.name, 'POST');
                   alert("user has been created")
                   history.push(redirect)

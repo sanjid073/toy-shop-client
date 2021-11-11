@@ -57,10 +57,10 @@ const ManageAllOrders = () => {
         } else {
           setIsUpdated(false);
         }
-        console.log(data);
+        
       });
   };
-  console.log(orders);
+  
   return (
     <div className="my-section">
       <h3 className="text-center  py-3">Manage All Orders</h3>

@@ -1,4 +1,4 @@
-# Holidays Planner
+# Toy Shop
 
 It is a Full stack application made with ReactJS, mongodb, firebase, bootstrap CSS etc...
 

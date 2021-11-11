@@ -28,7 +28,6 @@ const Review = () => {
         } else {
         }
       });
-      console.log(data)
     };
 
   return (
