@@ -72,7 +72,7 @@ const Login = () => {
          signInWithGoogle()
       .then(result => {
           setUser(result.user)
-          console.log(result.user)
+          
           saveUser(result.user.email, result.user.displayName, 'PUT');
           history.push(redirect)
       })

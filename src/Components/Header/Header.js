@@ -73,31 +73,32 @@ const Header = () => {
                       Dashboard
                     </NavLink>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <NavLink
+                     {!admin &&  <NavLink
                       style={{color: "black"}}
                         activeStyle={{ color: "#FEB800" }}
                         className="nav-link active nav-NavLink"
                         to="/pay"
                       >
                         pay
-                      </NavLink>
-                      <NavLink
+                      </NavLink>}
+
+                     {!admin && <NavLink
                       style={{color: "black"}}
                       activeStyle={{ color: "#FEB800" }}
                       className="nav-link active nav-NavLink"
                       to="/myOrders"
                     >
                       My Orders
-                    </NavLink>
+                    </NavLink>}
                      
-                      <NavLink
+                     {!admin && <NavLink
                       style={{color: "black"}}
                       activeStyle={{ color: "#FEB800" }}
                       className="nav-link active nav-NavLink"
                       to="/review"
                     >
                       Review
-                    </NavLink>
+                    </NavLink>}
                       
                     { admin && 
                     <>
