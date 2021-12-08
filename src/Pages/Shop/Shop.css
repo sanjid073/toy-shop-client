@@ -1,6 +1,10 @@
 .my-section{
     background-color: #EADAC6;
 }
+.order-section{
+    background-color: #EADAC6;
+    padding: 50px 0;
+}
 .my-section-2{
     background-color: #EADAC6;
     padding: 100px 0;
@@ -13,7 +17,10 @@
   width: 180px;
   margin-top: -108px;
 }
-.my-title {
+.pay{
+  padding: 50px 0;
+  text-align: center;
 }
-.my-text {
+.pay img{
+  width: 50%;
 }

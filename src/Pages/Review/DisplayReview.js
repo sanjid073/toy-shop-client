@@ -12,14 +12,13 @@ const DisplayReview = () => {
     },[])
     return (
         <div className="container py-5">
-            <h4 className="my-color mb-2 text-center">TESTIMONIALS</h4>
-        <h2 className=" title mb-3 text-center">
-          What Users Say About Us
-        </h2>
+        <h1 className=" title mb-3 text-center">
+        What our customers say
+        </h1>
             <div className="row">
                 {
-                    reviews.map(review => <div className="col-lg-6">
-                    <div style={{height:"300px"}} class="card mb-3 p-3 text-center">
+                    reviews.map(review => <div className="col-lg-4">
+                    <div style={{height:"300px"}} class="card m-5 p-3 text-center border-0 bg-transparent">
                     <img src={review.img}
                      class="rounded-circle mx-auto" 
                      width="75px"
@@ -27,7 +26,7 @@ const DisplayReview = () => {
                      alt="..."/>
                     <div class="card-body">
                     <Rating
-                    className="text-danger mb-2"
+                    className="start-icon"
                     initialRating={review.star}
                     readonly
                     emptySymbol="fa fa-star-o fa-2x fs-6"

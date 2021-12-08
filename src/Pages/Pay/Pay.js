@@ -1,9 +1,9 @@
 import React from 'react';
-
+import pay from "../../img/comingSoon.bd8840f9.jpg"
 const Pay = () => {
     return (
-        <div>
-            <h1 className="text-danger text-center">Pay is Under Construction</h1>
+        <div className="pay">
+              <img src={pay} alt="" />
         </div>
     );
 };

@@ -18,7 +18,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
           <NavLink to="/">
-            <img src={logo} width="80px" alt="" />
+            <img src={logo} width="140px" alt="" />
           </NavLink>
           <button
             className="navbar-toggler"
@@ -61,42 +61,46 @@ const Header = () => {
                 </>
               ) : (
                 <>
-                  <li class="nav-item dropdown">
+                  <li class="nav-item dropdown nav-NavLink active">
                     <NavLink
-                      class="nav-link dropdown-toggle"
+                      class="nav-link dropdown-toggle "
                       to="/"
                       id="navbarDropdown"
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
+                      <i class="fas fa-th-list text-white m-2"></i>
                       Dashboard
                     </NavLink>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
                      {!admin &&  <NavLink
-                      style={{color: "black"}}
+                      style={{color: "white"}}
                         activeStyle={{ color: "#FEB800" }}
                         className="nav-link active nav-NavLink"
                         to="/pay"
                       >
-                        pay
+                        <i class="fas fa-money-bill-wave text-white m-2"></i>
+                        Pay
                       </NavLink>}
 
                      {!admin && <NavLink
-                      style={{color: "black"}}
+                      style={{color: "white"}}
                       activeStyle={{ color: "#FEB800" }}
                       className="nav-link active nav-NavLink"
                       to="/myOrders"
                     >
+                      <i class="fas fa-shopping-basket text-white m-2"></i>
                       My Orders
                     </NavLink>}
                      
                      {!admin && <NavLink
-                      style={{color: "black"}}
+                      style={{color: "white"}}
                       activeStyle={{ color: "#FEB800" }}
                       className="nav-link active nav-NavLink"
                       to="/review"
                     >
+                      <i class="fas fa-comment-medical text-white m-2"></i>
                       Review
                     </NavLink>}
                       
@@ -104,42 +108,56 @@ const Header = () => {
                     <>
                    
                    <NavLink
-                      style={{color: "black"}}
+                      style={{color: "white"}}
                       activeStyle={{ color: "#FEB800" }}
                       className="nav-link active nav-NavLink"
                       to="/manageAllOrder"
                     >
+                      <i class="fas fa-sort-alpha-up-alt text-white m-2"></i>
                       All Orders
                       </NavLink>
                    <NavLink
-                      style={{color: "black"}}
+                      style={{color: "white"}}
                       activeStyle={{ color: "#FEB800" }}
                       className="nav-link active nav-NavLink"
                       to="/addProducts"
                     >
+                      <i class="fas fa-plus text-white m-2"></i>
                       Add a Products
                       </NavLink>
                    <NavLink
-                      style={{color: "black"}}
+                      style={{color: "white"}}
                       activeStyle={{ color: "#FEB800" }}
                       className="nav-link active nav-NavLink"
                       to="/manageProduct"
                     >
+                      <i class="fas fa-tasks text-white m-2"></i>
                       Manage Products
                       </NavLink>
                       <NavLink
-                      style={{color: "black"}}
+                      style={{color: "white"}}
                       activeStyle={{ color: "#FEB800" }}
                       className="nav-link active nav-NavLink"
                       to="/makeAdmin"
                     >
+                      <i class="fas fa-users-cog text-white m-2"></i>
                       Make Admin
                     </NavLink>
                     </>
                     }
-                     <li onClick={Logout} className=" btn ">
-                     Log Out
-                  </li>
+                    
+                     
+                     <li
+                      style={{color: "white", cursor: "pointer"}}
+                      activeStyle={{ color: "#FEB800" }}
+                      className="nav-link active nav-NavLink"
+                      onClick={Logout}
+                      
+                    >
+                      <i class="fas fa-sign-out-alt text-white m-2" ></i>
+                      log out
+                    </li>
+                  
                     
                     </ul>
                   </li>

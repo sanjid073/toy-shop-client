@@ -23,3 +23,6 @@
 a:hover{
     color: #F34E3A;
 }
+.dropdown-menu{
+    min-width: 13rem;
+}

@@ -16,7 +16,7 @@ const ProductDetails = () => {
     return (
         <div className="my-section-2">
             <div className="container">
-                <div className="row">
+                <div className="row align-items-center">
                     <div className="col-lg-7 text-center">
                     <div className="card my-card border-0" >
                      <div className="text-center">

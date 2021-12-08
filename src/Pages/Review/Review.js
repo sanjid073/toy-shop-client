@@ -42,7 +42,7 @@ const Review = () => {
           {...register("name", { required: true })}
         />
         <input
-          placeholder="Your Image"
+          placeholder="Your Image Link"
           {...register("img", { required: true })}
         />
          
@@ -52,9 +52,9 @@ const Review = () => {
         <textarea
           name="Description"
           id=""
-          placeholder="Description"
-          cols="30"
-          rows="3"
+          placeholder="Add your comment"
+          cols="60"
+          rows="8"
           {...register("dec", { required: true })}
         ></textarea>
 

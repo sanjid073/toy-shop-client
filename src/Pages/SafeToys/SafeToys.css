@@ -1,0 +1,32 @@
+.safe-toys{
+        background: url(../../img/safe-toys-bg.jpg) no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        background-size: cover;  
+        width: 100%;
+        height: 100%; 
+        padding: 50px 0;
+}
+.safe-toys h1{
+    font-size: 48px;
+    font-weight: bolder;
+}
+.safe-toys h6{
+    font-size: 24px;
+}
+.safe-toys img, h6{
+    margin-bottom: 30px;
+}
+.safe-toys button {
+    width: 50%;
+    height: 10%;
+    font-size: 20px;
+    border-radius: 35px;
+}
+.safe-toys button:hover{
+    border-radius: 35px;
+}
+.start-icon {
+    color: #c5ab2f;
+    margin-bottom: 10px;
+}
